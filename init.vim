@@ -2,16 +2,16 @@
 call plug#begin('~/.local/share/nvim/plugged')
     " NERDTree
     Plug 'scrooloose/nerdtree'
-    
+
     " Autoclosing '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
 
     " Autocompletion and linter
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    
+
     " Theme
     Plug 'joshdick/onedark.vim'
-    
+
     " Status bar
     Plug 'vim-airline/vim-airline'
 
@@ -19,11 +19,11 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'preservim/nerdcommenter'
 call plug#end()
 
-   
+
 " ------- General Settings ------
 syntax on
 set encoding=UTF-8
-set relativenumber 
+set relativenumber
 set cursorline
 set nu rnu
 set tabstop=4
@@ -72,8 +72,20 @@ let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
 
-" Enable NERDCommenterToggle to check all selected lines is commented or not 
+" Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
+
+" Creates a function that trims whitespaces upon saving
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    cal winrestview(l:save)
+endfun
+
+augroup CS
+    autocmd!
+    autocmd BufWritePre * :call TrimWhitespace()
+augroup END
 
 " --------- Sources the theme
 
