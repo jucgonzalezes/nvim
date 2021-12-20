@@ -35,11 +35,13 @@ The file init.vim is the main configuration file and uses the files inside the
          /nvim/site/autoload/plug.vim --create-dirs \
          https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
+
 4) Start NeoVim:
 
 ```
     $ nvim
 ```
+
 5) Inside NeoVim, run vim-plug to install the plugins:
 
 ```
