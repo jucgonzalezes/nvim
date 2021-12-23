@@ -9,8 +9,18 @@ The file init.vim is the main configuration file and uses the files inside the
 
 - Vim version 2.4 +
 - Brew
-- Node (for coc)
-- Yarn (for sourcing coc)
+- Nodejs npm (for coc)
+    '''
+    $ brew install node
+    '''
+- Yarn (latest stable version with curl)
+    '''
+    $ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+    '''
+  Alternatively, using npm (last release - not recommended):
+    '''
+    $ npm install --global yarn
+    '''
 
 ***
 

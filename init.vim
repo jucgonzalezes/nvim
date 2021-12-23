@@ -9,7 +9,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     " Autocompletion and linter
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-    " Theme
+ " Theme
     Plug 'joshdick/onedark.vim'
 
     " Status bar
@@ -53,10 +53,10 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " ------ Remaps the nohl command to unlight search
-noremap <silent> <leader>, :nohl<CR>
+noremap <leader> :noh<CR>
 
-" ------- CoC Settings
-noremap <leader>/ :call NERDComment(0,"toggle")<C-m>
+" ------- NERDCommenter Settings
+noremap <leader>/ :call nerdcommenter#Comment(0,"toggle")<C-m>
 
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
