@@ -12,8 +12,13 @@ call plug#begin('~/.local/share/nvim/plugged')
  " Theme
     Plug 'joshdick/onedark.vim'
 
+    Plug 'aonemd/quietlight.vim'
+
     " Status bar
     Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+
+    Plug 'beauwilliams/statusline.lua'
 
     " Commenter
     Plug 'preservim/nerdcommenter'
@@ -36,6 +41,7 @@ set colorcolumn=80
 set scrolloff=8
 set nowrap
 set signcolumn=yes
+set termguicolors
 
 " ------- Remaps the leader key
 let mapleader = " "
@@ -89,6 +95,8 @@ augroup CS
 augroup END
 
 " --------- Sources the theme
+
+map <leader>, :source $HOME/.config/nvim/themes/quietlight.vim <CR> :AirlineTheme light <CR>
 
 source $HOME/.config/nvim/themes/onedark.vim
 source $HOME/.config/nvim/plgs/coc.vim
