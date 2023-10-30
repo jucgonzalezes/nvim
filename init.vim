@@ -7,7 +7,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'jiangmiao/auto-pairs'
 
     " Autocompletion and linter
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
  " Theme
     Plug 'joshdick/onedark.vim'
@@ -99,4 +99,4 @@ augroup END
 map <leader>, :source $HOME/.config/nvim/themes/quietlight.vim <CR> :AirlineTheme light <CR>
 
 source $HOME/.config/nvim/themes/onedark.vim
-source $HOME/.config/nvim/plgs/coc.vim
+" source $HOME/.config/nvim/plgs/coc.vim
