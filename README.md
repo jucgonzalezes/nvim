@@ -1,3 +1,5 @@
+# We are moving to LazyVim! 
+
 This repository contains my current NeoVim configuration files.
 
 The file init.vim is the main configuration file and uses the files inside the
